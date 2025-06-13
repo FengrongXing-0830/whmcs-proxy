@@ -5,9 +5,9 @@ const bodyParser = require('body-parser');
 const app = express();
 app.use(bodyParser.json());
 
-const WHMCS_IDENTIFIER = process.env.WHMCS_IDENTIFIER;
-const WHMCS_SECRET = process.env.WHMCS_SECRET;
-const WHMCS_API_URL = process.env.WHMCS_API_URL; // e.g. https://yourdomain.com/includes/api.php
+const WHMCS_IDENTIFIER = LL8XN1SMQzLsLEoiM7mR9CHpHRPzRYks;
+const WHMCS_SECRET = R9rgqm9Bujq6SZzE8XUCdPUtd8zYq75g;
+const WHMCS_API_URL = https://bizportal.cloud/includes/api.php; // e.g. https://yourdomain.com/includes/api.php
 
 app.post('/api/whmcs', async (req, res) => {
   const { action, parameters } = req.body;
@@ -15,7 +15,7 @@ app.post('/api/whmcs', async (req, res) => {
   const postData = {
     identifier: WHMCS_IDENTIFIER,
     secret: WHMCS_SECRET,
-    action: action,
+    action: 'GetClients',
     responsetype: 'json',
     ...parameters,
   };
