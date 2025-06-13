@@ -15,7 +15,7 @@ app.post('/api/whmcs', async (req, res) => {
   const postData = {
     identifier: WHMCS_IDENTIFIER,
     secret: WHMCS_SECRET,
-    action: 'GetClients',
+    action: action,
     responsetype: 'json',
     ...parameters,
   };
